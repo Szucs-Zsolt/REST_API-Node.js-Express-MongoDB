@@ -9,7 +9,7 @@ router.post("/bekuldes", (req, res) => {
     let elegedettseg = req.body.elegedettseg;
 
     // Hiba: érvénytelen az adat
-    if (!elegedettseg || elegedettseg<"1" || elegedettseg >"5") {
+    if (!elegedettseg || elegedettseg < "1" || elegedettseg > "5") {
         res.status(400).json({
             "message": "Hiányzó, vagy hibás adat (érvényes érték: 1-5 között))!"
         });
