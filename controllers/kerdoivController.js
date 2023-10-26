@@ -1,4 +1,7 @@
-const createKerdoiv = (req, res) => {
+const asyncHandler = require("express-async-handler");
+const Kerdoiv = require("../models/kerdoivModel");
+
+const createKerdoiv = asyncHandler(async (req, res) => {
     const { minoseg, gyorsasag, ar } = req.body;
     if (!minoseg || !gyorsasag || !ar) {
         res.status(400).json({
@@ -10,7 +13,9 @@ const createKerdoiv = (req, res) => {
             "message": "Hibás adatok (érvényes érték: 1-5 között))!"
         });
     }
-    res.status(200).json({ "message": "createKerdoiv rendben lefutott!!!" });
-};
+
+    const kerdoiv = await Kerdoiv.create({minoseg, gyorsasag, ar});
+    res.status(200).json(kerdoiv);
+});
 
 module.exports = { createKerdoiv };
