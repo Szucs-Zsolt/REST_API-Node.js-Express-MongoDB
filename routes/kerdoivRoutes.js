@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const { createKerdoiv } = require("../controllers/kerdoivController");
+const { kerdoivBekuldese, kerdoivekLetoltese } = require("../controllers/kerdoivController");
 
 //@desc Kitöltött kérdőív beküldése
 //@route POST /kerdoiv/bekuldes
 //@access public
 //TODO Beküldött kérdőív lementése az adatbázisba.
-router.post("/bekuldes", createKerdoiv);
+router.post("/bekuldes", kerdoivBekuldese);
+router.get("/letoltes", kerdoivekLetoltese);
+
 
 module.exports = router;
