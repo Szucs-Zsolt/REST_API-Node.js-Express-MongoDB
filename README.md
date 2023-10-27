@@ -14,14 +14,15 @@ Két végpontot tartalmaz:
 ## FONTOS:
 A .env file nem része a repository-nak, mivel ez tartalmazza majd a titkos adatokat, ebben az
 esetben a connection string-et. A fejlesztés során MongoDB Atlas cloud database-t használtam.
+
 Megadása:
 	CONNECTION_STRING=<MongoDB eléréséhez szükséges connection string>
 
 ## HASZNÁLATA (git clone után):
-   npm install			szükséges packege-ek telepítése
-   npm run dev			development módban való indítása	
+Szükséges packege-ek telepítése: npm install	
 
-   Environmentben, vagy .env file-ban megadható
-	SERVER_PORT=<használni kívánt port száma>	
-   Ha nincs megadva, akkor a használt port száma: 12345
-	pl. localhost:12345/kerdoiv/bekuldes
+Development módban való indítása:  npm run dev			
+
+   Environmentben, vagy .env file-ban megadható a SERVER_PORT=<használni kívánt port száma>	
+   
+   Ha nincs megadva, akkor a használt port száma: 12345 (pl. localhost:12345/kerdoiv/bekuldes)
