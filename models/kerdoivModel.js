@@ -9,20 +9,3 @@ const kerdoivSchema = new mongoose.Schema(
     {timestamps: true}
 );
 module.exports = mongoose.model("Kerdoiv", kerdoivSchema);
-
-
-
-
-
-    /*
-    {
-    minoseg:   { type: Number, required: [true, "A minőség megadása szükséges"] },
-    gyorsasag: { type: Number, required: [true, "A gyorsaság megadása szükséges"] },
-    ar:        { type: Number, required: [true, "Az ár megadása szükséges"] },
-    },
-    { timestamps: true }
-    
-);
-model.exports = mongoose.model("Kerdoiv", kerdoivSchema);
-*/
-

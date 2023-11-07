@@ -11,12 +11,15 @@ Két végpontot tartalmaz:
   2. GET /kerdoiv/letoltes
 	Visszaadja az adatbázis teljes tartalmát json formában
 
-## FONTOS:
+## FONTOS-1:
 A .env file nem része a repository-nak, mivel ez tartalmazza majd a titkos adatokat, ebben az
 esetben a connection string-et. A fejlesztés során MongoDB Atlas cloud database-t használtam.
 
 Megadása:
 	CONNECTION_STRING=<MongoDB eléréséhez szükséges connection string>
+
+## FONTOS-2:
+CORS (Cross-Origin Resource Sharing) engedélyezve.
 
 ## HASZNÁLATA (git clone után):
 Szükséges packege-ek telepítése: npm install	
